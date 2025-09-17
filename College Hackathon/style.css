@@ -1,0 +1,136 @@
+body {
+    font-family: sans-serif;
+    background-color: white;
+    text-align: center;
+    position: relative;
+}
+.logo{
+    height: 50px;
+    position: absolute;
+    top: -100px;
+    left: 650px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+img{
+    width: 50px;
+}
+
+.app {
+    margin: 200px auto;
+    width: 500px;
+    border: 3px solid black;
+    text-align: center;
+    display: flex;
+    border-radius: 10px;
+    z-index: 0;
+    position: relative;
+    box-shadow: 5px 5px;
+    
+    height: 350px;
+}
+
+
+button {
+    padding: 1em 3em;
+    font-family: sans-serif;
+    color: aliceblue;
+    background: linear-gradient(to right, #2abfff, #1778ee);
+    border: none;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+button::after {
+    content: '';
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: conic-gradient(from var(--angle), transparent 50%, rgb(228, 24, 24));
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+
+}
+
+button::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+#newChat{
+    border: 2px solid #eee;
+}
+#newChat {
+    transition-duration: 3s;
+    
+    
+    transition: 0.3s;
+}
+
+#newChat:hover {
+    background-image: linear-gradient(to right, #5488cc 0%, #537895 70%, #09203f 100%);
+    opacity: 1;
+}
+#sendBtn {
+    transition-duration: 3s;
+    
+    
+    transition: 0.3s;
+}
+
+#sendBtn:hover {
+    background-image: linear-gradient(to right, #5488cc 0%, #537895 70%, #09203f 100%);
+    opacity: 1;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+
+}
+
+
+.sidebar {
+    width: 40%;
+    background-color: rgb(166, 163, 163);
+
+}
+
+#userInput {
+    border-radius: 5px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+
+.chat {
+    align-items: center;
+    padding-left: 53px;
+    padding-top: 120px;
+
+
+}
+#chatList{
+    border: 2px solid black;
+}
